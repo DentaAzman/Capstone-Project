@@ -180,17 +180,23 @@ main {
   background-position: bottom;
 }
 
+.hero-seminyak {
+  background-image: url('../public/images/hero-seminyak.png');
+}
+
 .hero-nusadua {
   background-image: url('../public/images/hero-nusadua.jpg');
 }
 
 .hero-kintamani {
-  background-image: url('../public/images/hero-kintamani.jpg');
+  background-image: url('../public/images/hero-kintamani.png');
+  background-position: top;
 }
 
 .hero-kuta {
   background-image: url('../public/images/hero-kuta.png');
 }
+
 .hero__inner {
   margin: 0 auto;
   max-width: 800px;
@@ -216,6 +222,38 @@ main {
 .hero__image img {
   width: 100%;
   border-radius: 15px;
+}
+
+.place-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  margin-top: 3em;
+}
+
+.place-list a {
+  text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.place-list a:hover {
+  transform: scale(1.1);
+  .place-list__container img {
+    box-shadow: 0 0 20px rgb(106, 238, 106);
+  }
+}
+
+.place-list__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.place-list__container img {
+  max-height: 200px;
+  margin-bottom: 1em;
 }
 
 footer {
