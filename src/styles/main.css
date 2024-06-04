@@ -157,7 +157,45 @@ main {
 
 .explore-card img:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 40px rgb(165, 255, 165);
+  box-shadow: 0 0 40px rgb(106, 238, 106);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/hero-canggu.png');
+  background-position: center;
+  border-radius: 15px;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: #ffffff !important;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+.hero__image img {
+  width: 100%;
+  border-radius: 15px;
 }
 
 footer {
