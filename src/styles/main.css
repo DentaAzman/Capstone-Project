@@ -69,6 +69,7 @@ header a {
 main {
   width: 100%;
   margin: 0 auto;
+  min-height: 100vh;
 
   max-width: 1000px;
 }
@@ -132,6 +133,69 @@ main {
 
 .destination-list__name a:hover {
   text-decoration-line: underline;
+}
+
+.explore-container {
+  text-align: center;
+}
+
+.heading {
+  margin-bottom: 4em;
+}
+
+.explore-card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
+}
+
+.explore-card img {
+  height: 200px;
+  border-radius: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.explore-card img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 40px rgb(106, 238, 106);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 480px;
+  width: 100%;
+  text-align: center;
+  background-image: url('../public/images/hero-canggu.png');
+  background-position: center;
+  border-radius: 10px;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #ffffff !important;
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.hero__tagline {
+  color: #ffffff !important;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hero__image {
+  width: 100%;
+}
+
+.hero__image img {
+  width: 100%;
+  border-radius: 15px;
 }
 
 footer {
