@@ -180,6 +180,18 @@ main {
   background-position: bottom;
 }
 
+.hero-canggu {
+  background-image: url('../public/images/hero-canggu.png');
+}
+
+.hero-ubud {
+  background-image: url('../public/images/hero-ubud.jpg');
+  background-position: bottom;
+}
+
+.hero-nusadua {
+  background-image: url('../public/images/hero-nusadua.jpg');
+}
 .hero__inner {
   margin: 0 auto;
   max-width: 800px;
