@@ -166,12 +166,21 @@ main {
   min-height: 480px;
   width: 100%;
   text-align: center;
-  
+
   background-position: center;
   border-radius: 10px;
 }
 
-.hero-nusadua{
+.hero-canggu {
+  background-image: url('../public/images/hero-canggu.png');
+}
+
+.hero-ubud {
+  background-image: url('../public/images/hero-ubud.jpg');
+  background-position: bottom;
+}
+
+.hero-nusadua {
   background-image: url('../public/images/hero-nusadua.jpg');
 }
 .hero__inner {
