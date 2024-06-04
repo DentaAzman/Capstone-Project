@@ -166,9 +166,18 @@ main {
   min-height: 480px;
   width: 100%;
   text-align: center;
-  background-image: url('../public/images/hero-canggu.png');
+
   background-position: center;
   border-radius: 10px;
+}
+
+.hero-canggu {
+  background-image: url('../public/images/hero-canggu.png');
+}
+
+.hero-ubud {
+  background-image: url('../public/images/hero-ubud.jpg');
+  background-position: bottom;
 }
 
 .hero__inner {
