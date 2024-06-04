@@ -168,7 +168,7 @@ main {
   text-align: center;
   background-image: url('../public/images/hero-canggu.png');
   background-position: center;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 .hero__inner {
