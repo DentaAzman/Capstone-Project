@@ -1,1 +1,3 @@
-console.log("INI testing");
+const command = "Halo";
+
+console.log(command + "INI testing");
