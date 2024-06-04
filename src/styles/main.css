@@ -183,6 +183,14 @@ main {
 .hero-nusadua {
   background-image: url('../public/images/hero-nusadua.jpg');
 }
+
+.hero-kintamani {
+  background-image: url('../public/images/hero-kintamani.jpg');
+}
+
+.hero-kuta {
+  background-image: url('../public/images/hero-kuta.png');
+}
 .hero__inner {
   margin: 0 auto;
   max-width: 800px;
