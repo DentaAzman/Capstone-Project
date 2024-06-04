@@ -1,3 +1,4 @@
-const command = "Halo";
+import './components/main-components.js';
+import App from './views/app.js';
 
-console.log(command + "INI testing");
+document.addEventListener('DOMContentLoaded', main);
