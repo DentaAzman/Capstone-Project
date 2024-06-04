@@ -166,11 +166,14 @@ main {
   min-height: 480px;
   width: 100%;
   text-align: center;
-  background-image: url('../public/images/hero-canggu.png');
+  
   background-position: center;
   border-radius: 10px;
 }
 
+.hero-nusadua{
+  background-image: url('../public/images/hero-nusadua.jpg');
+}
 .hero__inner {
   margin: 0 auto;
   max-width: 800px;
