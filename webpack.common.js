@@ -4,12 +4,13 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app: path.resolve(__dirname, 'src/scripts/index.js'),
+    app: path.resolve(__dirname, 'src/script/index.js'),
   },
   output: {
     filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -21,6 +22,18 @@ module.exports = {
           },
           {
             loader: 'css-loader',
+          },
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[hash].[ext]',
+              outputPath: 'images',
+            },
           },
         ],
       },
