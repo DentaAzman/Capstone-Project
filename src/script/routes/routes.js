@@ -1,7 +1,9 @@
-import explore from "../views/pages/explore";
+import explore from '../views/pages/explore';
+import Home from '../views/pages/home';
 
 const routes = {
-    '/explore': explore,
+  '/': Home,
+  '/explore': explore,
 };
 
 export default routes;
