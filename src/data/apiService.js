@@ -1,5 +1,5 @@
 
-ort API_ENDPOINT from './api-endpoint';
+port API_ENDPOINT from './api-endpoint';
 
 export const fetchCangguArticles = async () => {
   const response = await fetch(API_ENDPOINT.CANGGU);
