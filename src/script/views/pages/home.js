@@ -27,7 +27,7 @@ const Home = {
           <div class="destination-image" data-src="Ellipse 2.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
-              <a href="#"><a href="#">Canggu & Berawa</a></a>
+              <a href="#"><a href="#/explore-canggu">Canggu & Berawa</a></a>
             </h2>
             <p class="destination-list__body">
               The best mix of Everything Bali has to offer - surfing, party,
@@ -40,7 +40,7 @@ const Home = {
           <div class="destination-image" data-src="Ellipse 4.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
-              <a href="#">Nusa Dua & Benoa</a>
+              <a href="#/explore-nusadua">Nusa Dua & Benoa</a>
             </h2>
             <p class="destination-list__body">
               International 5star Resorts and golf courses for the luxury
@@ -53,7 +53,7 @@ const Home = {
           <div class="destination-image" data-src="Ellipse 1.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
-              <a href="#">Seminyak & Petitenget</a>
+              <a href="#/explore-seminyak">Seminyak & Petitenget</a>
             </h2>
             <p class="destination-list__body">
               Luxury villas, great hotels, beach & surf, nightlife, amazing
