@@ -46,7 +46,7 @@ const explore = {
           </div>
           <div class="explore-card">
             <a href="#">
-              <img src="${group6}" alt="gambar kintamini" />
+              <img src="${group6}" alt="gambar kintamani" />
             </a>
           </div>
         </div>

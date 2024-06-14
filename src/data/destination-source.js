@@ -18,6 +18,12 @@ class DestinationSource {
     const responseJson = await response.json();
     return responseJson.seminyak;
   }
+
+  static async exploreKintamani() {
+    const response = await fetch(API_ENDPOINT.KINTAMANI);
+    const responseJson = await response.json();
+    return responseJson.kintamani;
+  }
 }
 
 export default DestinationSource;
