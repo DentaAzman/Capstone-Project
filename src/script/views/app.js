@@ -11,10 +11,6 @@ class App {
   async renderPage() {
     const url = UrlParser.parseActiveUrlWithCombiner();
     const page = routes[url];
-    if (!page) {
-      console.error(`No page found for route: ${url}`);
-      return;
-    }
     this._content.innerHTML = await page.render();
     if (page.afterRender) {
       await page.afterRender();

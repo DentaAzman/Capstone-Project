@@ -20,7 +20,7 @@ const explore = {
 
         <div class="explore-card-container">
           <div class="explore-card">
-            <a href="#">
+            <a href="#/explore-canggu">
               <img src="${group1}" alt="gambar canggu" />
             </a>
           </div>
