@@ -78,7 +78,7 @@ const Home = {
           <div class="destination-image" data-src="Ellipse 3.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
-              <a href="#">Ubud</a>
+              <a href="#/explore-ubud">Ubud</a>
             </h2>
             <p class="destination-list__body">
               Bali’s cultural center. Blend of art, spirituality, lifestyle, &
@@ -91,7 +91,7 @@ const Home = {
           <div class="destination-image" data-src="Ellipse 6.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
-              <a href="#">Kuta & Tuban</a>
+              <a href="#/explore-kuta">Kuta & Tuban</a>
             </h2>
             <p class="destination-list__body">
               Bali’s party place for the young and wild. Bars, Shopping, Beach

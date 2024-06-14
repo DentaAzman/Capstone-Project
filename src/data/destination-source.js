@@ -24,6 +24,18 @@ class DestinationSource {
     const responseJson = await response.json();
     return responseJson.kintamani;
   }
+
+  static async exploreKuta() {
+    const response = await fetch(API_ENDPOINT.KUTA);
+    const responseJson = await response.json();
+    return responseJson.kuta;
+  }
+
+  static async exploreUbud() {
+    const response = await fetch(API_ENDPOINT.UBUD);
+    const responseJson = await response.json();
+    return responseJson.ubud;
+  }
 }
 
 export default DestinationSource;

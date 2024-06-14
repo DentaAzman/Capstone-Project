@@ -35,17 +35,17 @@ const explore = {
             </a>
           </div>
           <div class="explore-card">
-            <a href="#">
+            <a href="#/explore-ubud">
               <img src="${group4}" alt="gambar ubud" />
             </a>
           </div>
           <div class="explore-card">
-            <a href="#">
+            <a href="#/explore-kuta">
               <img src="${group5}" alt="gambar kuta" />
             </a>
           </div>
           <div class="explore-card">
-            <a href="#">
+            <a href="#/explore-kintamani">
               <img src="${group6}" alt="gambar kintamani" />
             </a>
           </div>
