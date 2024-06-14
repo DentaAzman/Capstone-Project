@@ -66,7 +66,7 @@ const Home = {
           <div class="destination-image" data-src="Ellipse 5.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
-              <a href="#">Kintamani</a>
+              <a href="#/explore-kintamani">Kintamani</a>
             </h2>
             <p class="destination-list__body">
               Fancy Cafe With the best view of mount Batur
