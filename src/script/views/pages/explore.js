@@ -25,12 +25,12 @@ const explore = {
             </a>
           </div>
           <div class="explore-card">
-            <a href="#">
+            <a href="#/explore-nusadua">
               <img src="${group2}" alt="gambar nusa dua" />
             </a>
           </div>
           <div class="explore-card">
-            <a href="#">
+            <a href="#/explore-seminyak">
               <img src="${group3}" alt="gambar seminyak" />
             </a>
           </div>

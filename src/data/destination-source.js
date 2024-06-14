@@ -6,6 +6,18 @@ class DestinationSource {
     const responseJson = await response.json();
     return responseJson.canggu;
   }
+
+  static async exploreNusaDua() {
+    const response = await fetch(API_ENDPOINT.NUSADUA);
+    const responseJson = await response.json();
+    return responseJson.nusadua;
+  }
+
+  static async exploreSeminyak() {
+    const response = await fetch(API_ENDPOINT.SEMINYAK);
+    const responseJson = await response.json();
+    return responseJson.seminyak;
+  }
 }
 
 export default DestinationSource;

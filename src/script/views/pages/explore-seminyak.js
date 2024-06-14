@@ -1,13 +1,13 @@
 import DestinationSource from '../../../data/destination-source';
-import heroCanggu from '../../../public/images/hero-canggu.png';
+import heroSeminyak from '../../../public/images/hero-seminyak.png';
 import { createArticleTemplate } from '../templates/template-creator';
 
-const ExploreCanggu = {
+const ExploreSeminyak = {
   async render() {
     return `
-      <div class="hero hero-canggu">
+      <div class="hero hero-seminyak">
         <div class="hero__inner">
-          <h2 class="hero__title">CANGGU</h2>
+          <h2 class="hero__title">SEMINYAK</h2>
           <br />
           <p class="hero__tagline">
             Cakrawala yang indah dengan pemandangan laut serta matahari terbenam
@@ -21,12 +21,12 @@ const ExploreCanggu = {
   },
 
   async afterRender() {
-    const heroCangguElement = document.querySelector('.hero-canggu');
-    if (heroCangguElement) {
-      heroCangguElement.style.backgroundImage = `url(${heroCanggu})`;
+    const heroSeminyakElement = document.querySelector('.hero-seminyak');
+    if (heroSeminyakElement) {
+      heroSeminyakElement.style.backgroundImage = `url(${heroSeminyak})`;
     }
 
-    const articles = await DestinationSource.exploreCanggu();
+    const articles = await DestinationSource.exploreSeminyak();
     const articlesContainer = document.querySelector('#articleList');
     articles.forEach((article) => {
       articlesContainer.innerHTML += createArticleTemplate(article);
@@ -34,4 +34,4 @@ const ExploreCanggu = {
   },
 };
 
-export default ExploreCanggu;
+export default ExploreSeminyak;

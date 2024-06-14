@@ -1,16 +1,17 @@
 import DestinationSource from '../../../data/destination-source';
-import heroCanggu from '../../../public/images/hero-canggu.png';
+import heroNusaDua from '../../../public/images/hero-nusadua.jpg';
 import { createArticleTemplate } from '../templates/template-creator';
 
-const ExploreCanggu = {
+const ExploreNusaDua = {
   async render() {
     return `
-      <div class="hero hero-canggu">
+      <div class="hero hero-nusadua">
         <div class="hero__inner">
-          <h2 class="hero__title">CANGGU</h2>
+          <h2 class="hero__title">NUSA DUA</h2>
           <br />
           <p class="hero__tagline">
-            Cakrawala yang indah dengan pemandangan laut serta matahari terbenam
+            Hotel Kelas Dunia dengan Destinasi wisata exsotis dan pantai yang
+            tiada tara
           </p>
         </div>
       </div>
@@ -21,12 +22,12 @@ const ExploreCanggu = {
   },
 
   async afterRender() {
-    const heroCangguElement = document.querySelector('.hero-canggu');
-    if (heroCangguElement) {
-      heroCangguElement.style.backgroundImage = `url(${heroCanggu})`;
+    const heroNusaDuaElement = document.querySelector('.hero-nusadua');
+    if (heroNusaDuaElement) {
+      heroNusaDuaElement.style.backgroundImage = `url(${heroNusaDua})`;
     }
 
-    const articles = await DestinationSource.exploreCanggu();
+    const articles = await DestinationSource.exploreNusaDua();
     const articlesContainer = document.querySelector('#articleList');
     articles.forEach((article) => {
       articlesContainer.innerHTML += createArticleTemplate(article);
@@ -34,4 +35,4 @@ const ExploreCanggu = {
   },
 };
 
-export default ExploreCanggu;
+export default ExploreNusaDua;
