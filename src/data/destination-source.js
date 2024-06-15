@@ -36,6 +36,18 @@ class DestinationSource {
     const responseJson = await response.json();
     return responseJson.ubud;
   }
+
+  static async detailArticle(id) {
+    try {
+      const response = await fetch(API_ENDPOINT.DETAIL(id));
+      const responseJson = await response.json();
+      console.log('API Response:', responseJson); // Debug: Output the API response
+      return responseJson;
+    } catch (error) {
+      console.error('Error fetching detail:', error);
+      return { message: 'Error fetching detail' };
+    }
+  }
 }
 
 export default DestinationSource;

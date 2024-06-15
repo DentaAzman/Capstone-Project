@@ -6,6 +6,7 @@ import ExploreSeminyak from '../views/pages/explore-seminyak';
 import ExploreKuta from '../views/pages/explore-kuta';
 import ExploreUbud from '../views/pages/explore-ubud';
 import Home from '../views/pages/home';
+import Detail from '../views/pages/detail';
 
 const routes = {
   '/': Home,
@@ -16,6 +17,7 @@ const routes = {
   '/explore-kintamani': ExploreKintamani,
   '/explore-kuta': ExploreKuta,
   '/explore-ubud': ExploreUbud,
+  '/detail/:id': Detail,
 };
 
 export default routes;
