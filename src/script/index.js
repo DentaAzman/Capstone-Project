@@ -6,11 +6,13 @@ import '../styles/responsive.css';
 import './bootstrap.bundle.min.js';
 
 import App from './views/app.js';
+import routes from './routes/routes.js';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
   drawer: document.querySelector('#navbarNav'),
   content: document.querySelector('#mainContent'),
+  routes,
 });
 
 window.addEventListener('hashchange', () => {
