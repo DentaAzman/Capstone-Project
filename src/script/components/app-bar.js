@@ -29,7 +29,7 @@ class AppBar extends HTMLElement {
                 <a class="nav-link" href="#/explore">Explore</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Ecotourism</a>
+                <a class="nav-link" href="#/community">Community</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>

@@ -7,10 +7,12 @@ import ExploreKuta from '../views/pages/explore-kuta';
 import ExploreUbud from '../views/pages/explore-ubud';
 import Home from '../views/pages/home';
 import Detail from '../views/pages/detail';
+import Community from '../views/pages/community';
 
 const routes = {
   '/': Home,
   '/explore': explore,
+  '/community': Community,
   '/explore-canggu': ExploreCanggu,
   '/explore-nusadua': ExploreNusaDua,
   '/explore-seminyak': ExploreSeminyak,

@@ -265,6 +265,42 @@ main {
   border-radius: 10px;
 }
 
+/*Comunity Page */
+.comment-section {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.comment-form textarea {
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.comment {
+  margin-bottom: 20px;
+}
+
+.comment .comment-content {
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.comment .reply-button {
+  background: none;
+  border: none;
+  color: #007BFF;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.comment .replies {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
 footer {
   background-color: rgb(146, 225, 146);
 }
