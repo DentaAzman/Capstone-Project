@@ -23,10 +23,13 @@ class AppBar extends HTMLElement {
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav nav-underline">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#/explore">Explore</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ecotourism</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">About Us</a>
