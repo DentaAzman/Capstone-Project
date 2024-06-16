@@ -48,6 +48,12 @@ class DestinationSource {
       return { message: 'Error fetching detail' };
     }
   }
+
+  static async threadsCommunity() {
+    const response = await fetch(API_ENDPOINT.THREADS);
+    const responseJson = await response.json();
+    return responseJson;
+  }
 }
 
 export default DestinationSource;

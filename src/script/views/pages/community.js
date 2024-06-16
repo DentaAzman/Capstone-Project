@@ -1,68 +1,86 @@
+import DestinationSource from '../../../data/destination-source';
+import API_ENDPOINT from '../../../globals/api-endpoint';
+
 const Community = {
-  addComment() {
+  async addComment() {
     const commentInput = document.getElementById('comment-input');
     const commentsContainer = document.getElementById('comments-container');
-
-    console.log(commentInput, commentsContainer);
 
     if (commentInput.value.trim() === '') {
       alert('Please write a comment.');
       return;
     }
 
-    const commentDiv = document.createElement('div');
-    commentDiv.classList.add('comment');
-
-    const commentContent = document.createElement('div');
-    commentContent.classList.add('comment-content');
-    commentContent.textContent = commentInput.value;
-
-    const replyButton = document.createElement('button');
-    replyButton.classList.add('reply-button');
-    replyButton.textContent = 'Reply';
-    replyButton.onclick = function () {
-      const replyInput = document.createElement('textarea');
-      replyInput.classList.add('form-control', 'mb-2');
-      replyInput.rows = '2';
-      replyInput.placeholder = 'Write your reply here...';
-
-      const submitReplyButton = document.createElement('button');
-      submitReplyButton.classList.add('btn', 'btn-success', 'mb-2');
-      submitReplyButton.textContent = 'Submit Reply';
-      submitReplyButton.onclick = function () {
-        if (replyInput.value.trim() === '') {
-          alert('Please write a reply.');
-          return;
-        }
-
-        const replyDiv = document.createElement('div');
-        replyDiv.classList.add('reply');
-
-        const replyContent = document.createElement('div');
-        replyContent.classList.add('comment-content');
-        replyContent.textContent = replyInput.value;
-
-        replyDiv.appendChild(replyContent);
-
-        const repliesContainer =
-          replyButton.nextElementSibling || document.createElement('div');
-        repliesContainer.classList.add('replies');
-        repliesContainer.appendChild(replyDiv);
-
-        commentDiv.appendChild(repliesContainer);
-        replyInput.remove();
-        submitReplyButton.remove();
-      };
-
-      commentDiv.appendChild(replyInput);
-      commentDiv.appendChild(submitReplyButton);
+    const newComment = {
+      nama: 'Nama',
+      body: commentInput.value,
     };
 
-    commentDiv.appendChild(commentContent);
-    commentDiv.appendChild(replyButton);
-    commentsContainer.appendChild(commentDiv);
+    const response = await fetch(API_ENDPOINT.THREADS, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(newComment),
+    });
 
-    commentInput.value = '';
+    if (response.ok) {
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment');
+
+      const commentContent = document.createElement('div');
+      commentContent.classList.add('comment-content');
+      commentContent.textContent = commentInput.value;
+
+      const replyButton = document.createElement('button');
+      replyButton.classList.add('reply-button');
+      replyButton.textContent = 'Reply';
+      replyButton.onclick = function () {
+        const replyInput = document.createElement('textarea');
+        replyInput.classList.add('form-control', 'mb-2');
+        replyInput.rows = '2';
+        replyInput.placeholder = 'Write your reply here...';
+
+        const submitReplyButton = document.createElement('button');
+        submitReplyButton.classList.add('btn', 'btn-success', 'mb-2');
+        submitReplyButton.textContent = 'Submit Reply';
+        submitReplyButton.onclick = function () {
+          if (replyInput.value.trim() === '') {
+            alert('Please write a reply.');
+            return;
+          }
+
+          const replyDiv = document.createElement('div');
+          replyDiv.classList.add('reply');
+
+          const replyContent = document.createElement('div');
+          replyContent.classList.add('comment-content');
+          replyContent.textContent = replyInput.value;
+
+          replyDiv.appendChild(replyContent);
+
+          const repliesContainer =
+            replyButton.nextElementSibling || document.createElement('div');
+          repliesContainer.classList.add('replies');
+          repliesContainer.appendChild(replyDiv);
+
+          commentDiv.appendChild(repliesContainer);
+          replyInput.remove();
+          submitReplyButton.remove();
+        };
+
+        commentDiv.appendChild(replyInput);
+        commentDiv.appendChild(submitReplyButton);
+      };
+
+      commentDiv.appendChild(commentContent);
+      commentDiv.appendChild(replyButton);
+      commentsContainer.appendChild(commentDiv);
+
+      commentInput.value = '';
+    } else {
+      alert('Failed to post comment.');
+    }
   },
 
   async render() {
@@ -80,10 +98,86 @@ const Community = {
     `;
   },
 
-  afterRender() {
+  async afterRender() {
     const postCommentButton = document.getElementById('post-comment-button');
     postCommentButton.addEventListener('click', () => {
       this.addComment();
+    });
+
+    const commentsContainer = document.getElementById('comments-container');
+    const threads = await DestinationSource.threadsCommunity();
+
+    threads.forEach((thread) => {
+      const commentDiv = document.createElement('div');
+      commentDiv.classList.add('comment');
+
+      const nameDiv = document.createElement('div');
+      nameDiv.classList.add('comment-name');
+      nameDiv.textContent = `Name: ${thread.nama}`;
+
+      const bodyDiv = document.createElement('div');
+      bodyDiv.classList.add('comment-body');
+      bodyDiv.textContent = `Comment: ${thread.body}`;
+
+      const createdAtDiv = document.createElement('div');
+      createdAtDiv.classList.add('comment-created-at');
+      createdAtDiv.textContent = `Created At: ${new Date(
+        thread.createdAt
+      ).toLocaleString()}`;
+
+      const updatedAtDiv = document.createElement('div');
+      updatedAtDiv.classList.add('comment-updated-at');
+      updatedAtDiv.textContent = `Updated At: ${new Date(
+        thread.updatedAt
+      ).toLocaleString()}`;
+
+      const replyButton = document.createElement('button');
+      replyButton.classList.add('reply-button');
+      replyButton.textContent = 'Reply';
+      replyButton.onclick = function () {
+        const replyInput = document.createElement('textarea');
+        replyInput.classList.add('form-control', 'mb-2');
+        replyInput.rows = '2';
+        replyInput.placeholder = 'Write your reply here...';
+
+        const submitReplyButton = document.createElement('button');
+        submitReplyButton.classList.add('btn', 'btn-success', 'mb-2');
+        submitReplyButton.textContent = 'Submit Reply';
+        submitReplyButton.onclick = function () {
+          if (replyInput.value.trim() === '') {
+            alert('Please write a reply.');
+            return;
+          }
+
+          const replyDiv = document.createElement('div');
+          replyDiv.classList.add('reply');
+
+          const replyContent = document.createElement('div');
+          replyContent.classList.add('comment-content');
+          replyContent.textContent = replyInput.value;
+
+          replyDiv.appendChild(replyContent);
+
+          const repliesContainer =
+            replyButton.nextElementSibling || document.createElement('div');
+          repliesContainer.classList.add('replies');
+          repliesContainer.appendChild(replyDiv);
+
+          commentDiv.appendChild(repliesContainer);
+          replyInput.remove();
+          submitReplyButton.remove();
+        };
+
+        commentDiv.appendChild(replyInput);
+        commentDiv.appendChild(submitReplyButton);
+      };
+
+      commentDiv.appendChild(nameDiv);
+      commentDiv.appendChild(bodyDiv);
+      commentDiv.appendChild(createdAtDiv);
+      commentDiv.appendChild(updatedAtDiv);
+      commentDiv.appendChild(replyButton);
+      commentsContainer.appendChild(commentDiv);
     });
   },
 };

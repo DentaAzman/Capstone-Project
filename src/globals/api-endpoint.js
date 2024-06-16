@@ -8,6 +8,7 @@ const API_ENDPOINT = {
   KUTA: `${CONFIG.BASE_URL}article/kuta`,
   NUSADUA: `${CONFIG.BASE_URL}article/nusadua`,
   DETAIL: (id) => `${CONFIG.BASE_URL}article/detail/${id}`,
+  THREADS: `${CONFIG.BASE_URL}threads`,
 };
 
 export default API_ENDPOINT;
