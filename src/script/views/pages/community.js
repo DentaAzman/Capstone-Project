@@ -49,6 +49,25 @@ const Community = {
 
   async render() {
     return `
+      <section class="tourists-problem-section">
+        <h2>Masalah Lingkungan</h2>
+        <div class="text-container">
+          <h3>Sampah</h3>
+          <p>
+            Kepala Dinas Lingkungan Hidup (DLHK) Bali Gede Suarjana mengakui sampah merupakan isu lingkungan utama yang saat ini sedang dihadapi Pulau Dewata. Masih banyak sampah yang berserakan dari turis/wisatawan yang datang ke Bali.
+          </p>
+
+          <h3>Pendatang</h3>
+          <p>
+            Banyakanya Pendatang dari luar membuat daerah canggu tidak terasa seperti bali dikarenakan budaya luar yang masuk sanagatlah Keras.
+          </p>
+        </div>
+
+        <div class="image-container">
+        
+        </div>
+      </section>
+
       <section class="comment-section">
         <h2>Comments</h2>
         <div class="comment-form mb-4">
