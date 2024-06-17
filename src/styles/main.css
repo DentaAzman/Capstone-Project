@@ -266,11 +266,12 @@ main {
 }
 
 /*Comunity Page */
+
 .comment-section {
   background: white;
-  padding: 20px;
+  padding: 2em;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .comment-form textarea {
@@ -279,7 +280,10 @@ main {
 }
 
 .comment {
-  margin-bottom: 20px;
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.1);
+  padding: 1em;
+  line-height: 28px;
+  border-radius: 8px;
 }
 
 .comment .comment-content {
@@ -288,18 +292,27 @@ main {
   border-radius: 4px;
 }
 
-.comment .reply-button {
-  background: none;
-  border: none;
-  color: #007BFF;
-  cursor: pointer;
-  margin-top: 5px;
+.comment-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4em;
+  margin-top: 4em;
 }
 
-.comment .replies {
-  margin-left: 20px;
-  margin-top: 10px;
+.comment-name {
+  font-weight: bold;
+  font-size: 18px;
 }
+
+.comment p {
+  text-align: end;
+  font-size: smaller;
+  color: #777777 !important;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+/* Footer */
 
 footer {
   background-color: rgb(146, 225, 146);

@@ -4,15 +4,16 @@ import API_ENDPOINT from '../../../globals/api-endpoint';
 const Community = {
   async addComment() {
     const commentInput = document.getElementById('comment-input');
+    const nameInput = document.getElementById('name-input');
     const commentsContainer = document.getElementById('comments-container');
 
-    if (commentInput.value.trim() === '') {
-      alert('Please write a comment.');
+    if (commentInput.value.trim() === '' || nameInput.value.trim() === '') {
+      alert('Please write a comment and enter your name.');
       return;
     }
 
     const newComment = {
-      nama: 'Nama',
+      nama: nameInput.value,
       body: commentInput.value,
     };
 
@@ -25,59 +26,22 @@ const Community = {
     });
 
     if (response.ok) {
+      const data = await response.json();
       const commentDiv = document.createElement('div');
       commentDiv.classList.add('comment');
 
       const commentContent = document.createElement('div');
       commentContent.classList.add('comment-content');
-      commentContent.textContent = commentInput.value;
-
-      const replyButton = document.createElement('button');
-      replyButton.classList.add('reply-button');
-      replyButton.textContent = 'Reply';
-      replyButton.onclick = function () {
-        const replyInput = document.createElement('textarea');
-        replyInput.classList.add('form-control', 'mb-2');
-        replyInput.rows = '2';
-        replyInput.placeholder = 'Write your reply here...';
-
-        const submitReplyButton = document.createElement('button');
-        submitReplyButton.classList.add('btn', 'btn-success', 'mb-2');
-        submitReplyButton.textContent = 'Submit Reply';
-        submitReplyButton.onclick = function () {
-          if (replyInput.value.trim() === '') {
-            alert('Please write a reply.');
-            return;
-          }
-
-          const replyDiv = document.createElement('div');
-          replyDiv.classList.add('reply');
-
-          const replyContent = document.createElement('div');
-          replyContent.classList.add('comment-content');
-          replyContent.textContent = replyInput.value;
-
-          replyDiv.appendChild(replyContent);
-
-          const repliesContainer =
-            replyButton.nextElementSibling || document.createElement('div');
-          repliesContainer.classList.add('replies');
-          repliesContainer.appendChild(replyDiv);
-
-          commentDiv.appendChild(repliesContainer);
-          replyInput.remove();
-          submitReplyButton.remove();
-        };
-
-        commentDiv.appendChild(replyInput);
-        commentDiv.appendChild(submitReplyButton);
-      };
+      commentContent.textContent = `${nameInput.value}: ${commentInput.value}`;
 
       commentDiv.appendChild(commentContent);
-      commentDiv.appendChild(replyButton);
       commentsContainer.appendChild(commentDiv);
 
       commentInput.value = '';
+      nameInput.value = '';
+
+      alert('Comment posted successfully!');
+      location.reload();
     } else {
       alert('Failed to post comment.');
     }
@@ -88,10 +52,11 @@ const Community = {
       <section class="comment-section">
         <h2>Comments</h2>
         <div class="comment-form mb-4">
+          <input type="text" id="name-input" class="form-control mb-2" placeholder="Your Name">
           <textarea id="comment-input" class="form-control mb-2" rows="3" placeholder="Write your comment here..."></textarea>
           <button id="post-comment-button" class="btn btn-success">Post Comment</button>
         </div>
-        <div id="comments-container">
+        <div id="comments-container" class="comment-container">
           <!-- Comments will be dynamically added here -->
         </div>
       </section>
@@ -113,70 +78,21 @@ const Community = {
 
       const nameDiv = document.createElement('div');
       nameDiv.classList.add('comment-name');
-      nameDiv.textContent = `Name: ${thread.nama}`;
+      nameDiv.textContent = `${thread.nama}`;
 
       const bodyDiv = document.createElement('div');
       bodyDiv.classList.add('comment-body');
-      bodyDiv.textContent = `Comment: ${thread.body}`;
+      bodyDiv.textContent = `${thread.body}`;
 
-      const createdAtDiv = document.createElement('div');
+      const createdAtDiv = document.createElement('p');
       createdAtDiv.classList.add('comment-created-at');
-      createdAtDiv.textContent = `Created At: ${new Date(
+      createdAtDiv.textContent = `${new Date(
         thread.createdAt
       ).toLocaleString()}`;
-
-      const updatedAtDiv = document.createElement('div');
-      updatedAtDiv.classList.add('comment-updated-at');
-      updatedAtDiv.textContent = `Updated At: ${new Date(
-        thread.updatedAt
-      ).toLocaleString()}`;
-
-      const replyButton = document.createElement('button');
-      replyButton.classList.add('reply-button');
-      replyButton.textContent = 'Reply';
-      replyButton.onclick = function () {
-        const replyInput = document.createElement('textarea');
-        replyInput.classList.add('form-control', 'mb-2');
-        replyInput.rows = '2';
-        replyInput.placeholder = 'Write your reply here...';
-
-        const submitReplyButton = document.createElement('button');
-        submitReplyButton.classList.add('btn', 'btn-success', 'mb-2');
-        submitReplyButton.textContent = 'Submit Reply';
-        submitReplyButton.onclick = function () {
-          if (replyInput.value.trim() === '') {
-            alert('Please write a reply.');
-            return;
-          }
-
-          const replyDiv = document.createElement('div');
-          replyDiv.classList.add('reply');
-
-          const replyContent = document.createElement('div');
-          replyContent.classList.add('comment-content');
-          replyContent.textContent = replyInput.value;
-
-          replyDiv.appendChild(replyContent);
-
-          const repliesContainer =
-            replyButton.nextElementSibling || document.createElement('div');
-          repliesContainer.classList.add('replies');
-          repliesContainer.appendChild(replyDiv);
-
-          commentDiv.appendChild(repliesContainer);
-          replyInput.remove();
-          submitReplyButton.remove();
-        };
-
-        commentDiv.appendChild(replyInput);
-        commentDiv.appendChild(submitReplyButton);
-      };
 
       commentDiv.appendChild(nameDiv);
       commentDiv.appendChild(bodyDiv);
       commentDiv.appendChild(createdAtDiv);
-      commentDiv.appendChild(updatedAtDiv);
-      commentDiv.appendChild(replyButton);
       commentsContainer.appendChild(commentDiv);
     });
   },
