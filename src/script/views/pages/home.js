@@ -48,7 +48,7 @@ const Home = {
           </div>
         </div>
 
-        <div class="destination-list__container" data-aos="fade-up" data-aos-delay="700">
+        <div class="destination-list__container" data-aos="fade-up">
           <div class="destination-image" data-src="Ellipse 1.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
@@ -61,7 +61,7 @@ const Home = {
           </div>
         </div>
 
-        <div class="destination-list__container" data-aos="fade-up" data-aos-delay="800">
+        <div class="destination-list__container" data-aos="fade-up">
           <div class="destination-image" data-src="Ellipse 5.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
@@ -73,7 +73,7 @@ const Home = {
           </div>
         </div>
 
-        <div class="destination-list__container" data-aos="fade-up" data-aos-delay="900">
+        <div class="destination-list__container" data-aos="fade-up">
           <div class="destination-image" data-src="Ellipse 3.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
@@ -86,7 +86,7 @@ const Home = {
           </div>
         </div>
 
-        <div class="destination-list__container" data-aos="fade-up" data-aos-delay="1000"> 
+        <div class="destination-list__container" data-aos="fade-up"> 
           <div class="destination-image" data-src="Ellipse 6.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
