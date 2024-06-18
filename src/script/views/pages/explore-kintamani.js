@@ -5,8 +5,8 @@ import { createArticleTemplate } from '../templates/template-creator';
 const ExploreKintamani = {
   async render() {
     return `
-      <div class="hero hero-kintamani">
-        <div class="hero__inner">
+      <div class="hero hero-kintamani" data-aos="fade-up">
+        <div class="hero__inner" data-aos="fade-down" data-aos-delay="300">
           <h2 class="hero__title">KINTAMANI</h2>
           <br />
           <p class="hero__tagline">
@@ -16,7 +16,7 @@ const ExploreKintamani = {
         </div>
       </div>
 
-      <hr class="hero-divider" />
+      <hr class="hero-divider" data-aos="fade-up"/>
       <div id="articleList" class="article-list"></div>
     `;
   },
@@ -29,9 +29,19 @@ const ExploreKintamani = {
 
     const articles = await DestinationSource.exploreKintamani();
     const articlesContainer = document.querySelector('#articleList');
-    articles.forEach((article) => {
-      articlesContainer.innerHTML += createArticleTemplate(article);
+    articles.forEach((article, index) => {
+      const articleElement = document.createElement('div');
+      articleElement.innerHTML = createArticleTemplate(article);
+      articleElement.setAttribute('data-aos', 'fade-up');
+      articleElement.setAttribute('data-aos-delay', `${index * 100}`);
+      articlesContainer.appendChild(articleElement);
     });
+
+    AOS.init({
+      once: true,
+      duration: 1000,
+    });
+    AOS.refresh();
   },
 };
 

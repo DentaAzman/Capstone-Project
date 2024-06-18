@@ -17,39 +17,59 @@ const Community = {
       body: commentInput.value,
     };
 
-    const response = await fetch(API_ENDPOINT.THREADS, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(newComment),
-    });
+    try {
+      const response = await fetch(API_ENDPOINT.THREADS, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newComment),
+      });
 
-    if (response.ok) {
-      const data = await response.json();
-      const commentDiv = document.createElement('div');
-      commentDiv.classList.add('comment');
+      if (response.ok) {
+        const data = await response.json();
+        const commentDiv = document.createElement('div');
+        commentDiv.classList.add('comment');
+        commentDiv.setAttribute('data-aos', 'fade-up'); // Add AOS attribute
 
-      const commentContent = document.createElement('div');
-      commentContent.classList.add('comment-content');
-      commentContent.textContent = `${nameInput.value}: ${commentInput.value}`;
+        const nameDiv = document.createElement('div');
+        nameDiv.classList.add('comment-name');
+        nameDiv.textContent = data.nama || newComment.nama; // Fallback to newComment.nama
 
-      commentDiv.appendChild(commentContent);
-      commentsContainer.appendChild(commentDiv);
+        const bodyDiv = document.createElement('div');
+        bodyDiv.classList.add('comment-body');
+        bodyDiv.textContent = data.body || newComment.body; // Fallback to newComment.body
 
-      commentInput.value = '';
-      nameInput.value = '';
+        const createdAtDiv = document.createElement('p');
+        createdAtDiv.classList.add('comment-created-at');
+        createdAtDiv.textContent = `${new Date(
+          data.createdAt || Date.now()
+        ).toLocaleString()}`; // Fallback to current date
 
-      alert('Comment posted successfully!');
-      location.reload();
-    } else {
-      alert('Failed to post comment.');
+        commentDiv.appendChild(nameDiv);
+        commentDiv.appendChild(bodyDiv);
+        commentDiv.appendChild(createdAtDiv);
+        commentsContainer.appendChild(commentDiv);
+
+        // Refresh AOS to apply animations on dynamically added content
+        AOS.refresh();
+
+        commentInput.value = '';
+        nameInput.value = '';
+
+        alert('Comment posted successfully!');
+      } else {
+        alert('Failed to post comment.');
+      }
+    } catch (error) {
+      console.error('Error posting comment:', error);
+      alert('An error occurred while posting the comment.');
     }
   },
 
   async render() {
     return `
-      <section class="tourists-problem-section">
+      <section class="tourists-problem-section" data-aos="fade-up">
         <h2>Masalah Lingkungan</h2>
         <div class="main-information">
           <div class="text-container">
@@ -64,7 +84,7 @@ const Community = {
             </p>
           </div>
 
-          <div class="image-container">
+          <div class="image-container" data-aos="fade-up">
             <img src="/images/image-community.png" alt="gambar wisatawan yang tidak melestarikan lingkungan" />
           </div>
         </div>
@@ -105,14 +125,14 @@ const Community = {
         
       </section>
 
-      <section class="comment-section">
+      <section class="comment-section" data-aos="fade-up">
         <h2>Bagikan Pengalaman Anda!</h2>
         <div class="comment-form mb-4">
           <input type="text" id="name-input" class="form-control mb-2" placeholder="Nama Anda">
           <textarea id="comment-input" class="form-control mb-2" rows="3" placeholder="Tuliskan pengalaman atau komentar Anda..."></textarea>
           <button id="post-comment-button" class="btn btn-success">Kirim Komentar</button>
         </div>
-        <div id="comments-container" class="comment-container">
+        <div id="comments-container" class="comment-container" data-aos="fade-up">
           <!-- Comments will be dynamically added here -->
         </div>
       </section>
@@ -131,6 +151,7 @@ const Community = {
     threads.forEach((thread) => {
       const commentDiv = document.createElement('div');
       commentDiv.classList.add('comment');
+      commentDiv.setAttribute('data-aos', 'fade-up'); // Add AOS attribute
 
       const nameDiv = document.createElement('div');
       nameDiv.classList.add('comment-name');
@@ -150,6 +171,12 @@ const Community = {
       commentDiv.appendChild(bodyDiv);
       commentDiv.appendChild(createdAtDiv);
       commentsContainer.appendChild(commentDiv);
+    });
+
+    // Refresh AOS to apply animations on initial load
+    AOS.init({
+      once: true,
+      duration: 1000,
     });
   },
 };

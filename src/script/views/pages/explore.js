@@ -8,8 +8,8 @@ import group6 from '../../../public/images/Group 6.png';
 const explore = {
   async render() {
     return `
-      <div class="explore-container">
-        <div class="heading">
+      <div class="explore-container" data-aos="fade-in">
+        <div class="heading" data-aos="fade-down">
           <h2 class="heading__title">Explore Bali</h2>
           <p class="heading__text">
             Temukan Tempat Wisata Bali yang Sedang Populer!
@@ -19,32 +19,32 @@ const explore = {
         <br />
 
         <div class="explore-card-container">
-          <div class="explore-card">
+          <div class="explore-card" data-aos="fade-up">
             <a href="#/explore-canggu">
               <img src="${group1}" alt="gambar canggu" />
             </a>
           </div>
-          <div class="explore-card">
+          <div class="explore-card" data-aos="fade-up" data-aos-delay="100">
             <a href="#/explore-nusadua">
               <img src="${group2}" alt="gambar nusa dua" />
             </a>
           </div>
-          <div class="explore-card">
+          <div class="explore-card" data-aos="fade-up" data-aos-delay="200">
             <a href="#/explore-seminyak">
               <img src="${group3}" alt="gambar seminyak" />
             </a>
           </div>
-          <div class="explore-card">
+          <div class="explore-card" data-aos="fade-up" data-aos-delay="300">
             <a href="#/explore-ubud">
               <img src="${group4}" alt="gambar ubud" />
             </a>
           </div>
-          <div class="explore-card">
+          <div class="explore-card" data-aos="fade-up" data-aos-delay="400">
             <a href="#/explore-kuta">
               <img src="${group5}" alt="gambar kuta" />
             </a>
           </div>
-          <div class="explore-card">
+          <div class="explore-card" data-aos="fade-up" data-aos-delay="500">
             <a href="#/explore-kintamani">
               <img src="${group6}" alt="gambar kintamani" />
             </a>
@@ -52,6 +52,14 @@ const explore = {
         </div>
       </div>
     `;
+  },
+
+  async afterRender() {
+    AOS.init({
+      once: true,
+      duration: 1000,
+    });
+    AOS.refresh();
   },
 };
 
