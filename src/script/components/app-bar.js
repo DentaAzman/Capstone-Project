@@ -32,7 +32,7 @@ class AppBar extends HTMLElement {
                 <a class="nav-link" href="#/community">Community</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About Us</a>
+                <a class="nav-link" href="#/about-us">About Us</a>
               </li>
             </ul>
           </div>

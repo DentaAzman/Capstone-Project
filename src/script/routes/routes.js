@@ -8,6 +8,7 @@ import ExploreUbud from '../views/pages/explore-ubud';
 import Home from '../views/pages/home';
 import Detail from '../views/pages/detail';
 import Community from '../views/pages/community';
+import AboutUs from '../views/pages/about-us';
 
 const routes = {
   '/': Home,
@@ -20,6 +21,7 @@ const routes = {
   '/explore-kuta': ExploreKuta,
   '/explore-ubud': ExploreUbud,
   '/detail/:id': Detail,
+  '/about-us' : AboutUs,
 };
 
 export default routes;
