@@ -87,7 +87,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 3em;
+  margin-bottom: 6em;
   position: relative;
 }
 
@@ -114,7 +114,7 @@ main {
   width: 100%;
   display: block;
   border-bottom: 2px solid rgb(146, 225, 146);
-  margin-top: 4em;
+  margin-top: 6em;
 }
 
 .destination-list {
@@ -146,6 +146,7 @@ main {
 
 .explore-container {
   text-align: center;
+  margin-bottom: 7em;
 }
 
 .heading {
@@ -179,32 +180,6 @@ main {
   background-position: center;
   border-radius: 10px;
 }
-
-/* .hero-canggu {
-  background-image: url('../public/images/hero-canggu.png');
-} */
-
-/* .hero-ubud {
-  background-image: url('../public/images/hero-ubud.jpg');
-  background-position: bottom;
-}
-
-.hero-seminyak {
-  background-image: url('../public/images/hero-seminyak.png');
-}
-
-.hero-nusadua {
-  background-image: url('../public/images/hero-nusadua.jpg');
-}
-
-.hero-kintamani {
-  background-image: url('../public/images/hero-kintamani.png');
-  background-position: top;
-}
-
-.hero-kuta {
-  background-image: url('../public/images/hero-kuta.png');
-} */
 
 .hero__inner {
   margin: 0 auto;
@@ -269,6 +244,96 @@ main {
   max-height: 200px;
   margin-bottom: 1em;
   border-radius: 10px;
+}
+
+/* Article Detail */
+
+.article-detail {
+  max-width: 900px;
+  margin-bottom: 6em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3em;
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.article-detail h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.article-detail img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.article-detail p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.article-detail p b {
+  color: #4caf50;
+}
+
+.article-detail p + p {
+  margin-top: 15px;
+}
+
+.article-detail .article-address,
+.article-detail .article-travel-tip {
+  background-color: #e8f5e9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.article-detail .article-open-hours,
+.article-detail .article-prices {
+  background-color: #f1f8e9;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.article-detail .article-maps {
+  margin-bottom: 20px;
+}
+
+.article-map {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.article-map iframe {
+  max-width: 100%;
+  height: 400px;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .article-detail {
+    padding: 15px;
+  }
+
+  .article-detail h2 {
+    font-size: 2rem;
+  }
+
+  .article-detail p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Community Page */
@@ -371,7 +436,7 @@ main {
 
 #about-us h1,
 #about-us h2 {
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 #about-us p {
@@ -384,7 +449,7 @@ main {
 }
 
 #about-us button {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -402,14 +467,12 @@ main {
 
 /* Footer styles */
 footer {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
   text-align: center;
   padding: 1rem 0;
   width: 100%;
 }
-
-/* Footer */
 
 footer {
   background-color: rgb(146, 225, 146);
@@ -418,4 +481,47 @@ footer {
 footer .row {
   display: flex;
   justify-content: space-around;
+}
+
+.footer__content .btn-floating {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  margin: 5px;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+
+  transition: background-color 0.3s;
+}
+
+.footer__content h2 {
+  font-size: 1.5em;
+}
+
+.footer__content h2 span {
+  color: rgb(0, 102, 0) !important;
+}
+
+.footer__content .btn-floating:hover {
+  background-color: #ececec;
+}
+
+.footer__content .btn-floating i {
+  line-height: 40px;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s, text-decoration 0.3s;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: black; /* Tetap hitam saat hover */
 }

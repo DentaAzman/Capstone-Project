@@ -5,7 +5,7 @@ import { createArticleDetailTemplate } from '../templates/template-creator';
 const Detail = {
   async render() {
     return `
-      <div id="articleDetail" class="article-detail"></div>
+      <div id="articleDetail" class="article-detail" data-aos="fade-up"></div>
     `;
   },
 
@@ -32,7 +32,16 @@ const Detail = {
         articleDetail.description
       ) {
         const articleContainer = document.querySelector('#articleDetail');
+
         articleContainer.innerHTML = createArticleDetailTemplate(articleDetail);
+        const articleElement = document.createElement('div');
+        articleElement.setAttribute('data-aos', 'fade-up');
+
+        AOS.init({
+          once: true,
+          duration: 1000,
+        });
+        AOS.refresh();
       } else {
         console.error('Article detail is undefined or missing properties.');
       }
