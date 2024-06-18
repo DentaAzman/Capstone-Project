@@ -1,6 +1,40 @@
 @media screen and (min-width: 1200px) {
   .hero {
-    min-width: 1000px;
+    width: 100%;
+  }
+  #heroImage img {
+    max-height: 400px; /* Reduced max height for medium screens */
+  }
+}
+@media screen and (min-width: 1000px) {
+  .hero {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .hero-container img{
+    width: 100%;
+   }
+   #heroImage img {
+     max-height: 450px; /* Further reduced max height for smaller screens */
+   }
+   .main-information {
+    flex-direction: column-reverse; /* Stack text and image vertically with text first */
+    align-items: center; /* Center align items */
+  }
+  .text-container,
+  .image-container {
+    width: 100%; /* Make both containers take full width */
+  }
+  .comment-container {
+    grid-template-columns: 1fr; /* Single column layout for comments */
+  }
+  .sub-information ol {
+    padding-left: 1em; /* Reduce padding for lists */
+  }
+  .tourists-problem-section,
+  .comment-section {
+    padding: 1em; /* Reduce padding for smaller screens */
   }
 }
 
@@ -11,14 +45,55 @@
     justify-content: center;
     align-items: center;
   }
-
   .explore-card-container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .article-list {
+    grid-template-columns: repeat(1, 1fr); /* Adjusted min width for medium screens */
+    gap: 30px;
+  }
+  .hero-container img{
+    width: 100%;
+  }
+  .main-information {
+    align-items: center; /* Center align items */
+  }
+  .main-information img {
+    height: auto; /* Ensure auto height for images */
+    width: 50%; /* 50% width for images in the section */
+  }
+  .sub-information ol {
+    padding-left: 1em; /* Reduce padding for lists */
+  }
+  .tourists-problem-section,
+  .comment-section {
+    padding: 1em; /* Reduce padding for smaller screens */
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 480px) {
   .explore-card-container {
     grid-template-columns: 1fr;
   }
+  .article-list {
+    grid-template-columns: repeat(1, 1fr); /* Adjusted min width for medium screens */
+    gap: 30px;
+  }
+  .tourists-problem-section,
+  .comment-section {
+    padding: 1em; /* Reduce padding for smaller screens */
+  }
+
+  .sub-information ol {
+    padding-left: 1em; /* Reduce padding for lists */
+  }
+
+  .comment-form {
+    padding: 0 1em; /* Add some horizontal padding to the form */
+  }
+  .main-information img{
+    height: 20%;
+    width: 90%;
+  }
 }
+

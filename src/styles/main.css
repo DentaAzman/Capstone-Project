@@ -106,7 +106,7 @@ main {
 .hero-container img {
   margin-top: 2em;
   max-height: 450px;
-  min-width: 1000px;
+  width: 1000px;
   object-fit: cover;
 }
 
