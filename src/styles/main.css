@@ -91,6 +91,9 @@ main {
 .btn {
   font-weight: 500;
   transition: transform 0.3s ease;
+  min-height: 44px;
+  min-width: 44px;
+  width: 200px;
 }
 
 .btn:hover {
@@ -178,7 +181,7 @@ main {
   background-image: url('../public/images/hero-canggu.png');
 } */
 
-.hero-ubud {
+/* .hero-ubud {
   background-image: url('../public/images/hero-ubud.jpg');
   background-position: bottom;
 }
@@ -198,7 +201,7 @@ main {
 
 .hero-kuta {
   background-image: url('../public/images/hero-kuta.png');
-}
+} */
 
 .hero__inner {
   margin: 0 auto;
