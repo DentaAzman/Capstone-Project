@@ -267,12 +267,59 @@ main {
 
 /*Comunity Page */
 
+.tourists-problem-section {
+  margin-bottom: 4em;
+}
+
+.tourists-problem-section h2 {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
+.main-information {
+  display: flex;
+}
+
+.main-information p {
+  text-indent: 3.5em;
+  text-align: justify;
+}
+
+.image-container {
+  width: 100%;
+  margin-left: 2.5em;
+}
+
+.image-container img {
+  width: 300px;
+  height: 375px;
+  object-fit: cover;
+}
+
+.sub-information ul li p {
+  text-indent: 3.5em;
+  text-align: justify;
+}
+
 .comment-section {
-  background: white;
+  background: rgb(219, 255, 209);
   padding: 2em;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin-bottom: 4em;
+}
+
+.comment-section h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.comment-section input {
+  margin-bottom: 1.5em !important;
+}
+
+.comment-section textarea {
+  margin-bottom: 1.5em !important;
 }
 
 .comment-form textarea {
@@ -285,6 +332,7 @@ main {
   padding: 1em;
   line-height: 28px;
   border-radius: 8px;
+  background-color: whitesmoke;
 }
 
 .comment .comment-content {

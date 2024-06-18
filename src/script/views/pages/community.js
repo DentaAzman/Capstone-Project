@@ -51,29 +51,66 @@ const Community = {
     return `
       <section class="tourists-problem-section">
         <h2>Masalah Lingkungan</h2>
-        <div class="text-container">
-          <h3>Sampah</h3>
-          <p>
-            Kepala Dinas Lingkungan Hidup (DLHK) Bali Gede Suarjana mengakui sampah merupakan isu lingkungan utama yang saat ini sedang dihadapi Pulau Dewata. Masih banyak sampah yang berserakan dari turis/wisatawan yang datang ke Bali.
-          </p>
+        <div class="main-information">
+          <div class="text-container">
+            <h3>Sampah</h3>
+            <p>
+              Kepala Dinas Lingkungan Hidup (DLHK) Bali Gede Suarjana mengakui sampah merupakan isu lingkungan utama yang saat ini sedang dihadapi Pulau Dewata. Masih banyak sampah yang berserakan dari turis/wisatawan yang datang ke Bali.
+            </p>
 
-          <h3>Pendatang</h3>
-          <p>
-            Banyakanya Pendatang dari luar membuat daerah canggu tidak terasa seperti bali dikarenakan budaya luar yang masuk sanagatlah Keras.
-          </p>
+            <h3>Pendatang</h3>
+            <p>
+              Kehadiran banyak pendatang dari luar negeri telah membuat daerah wisata di Bali kehilangan nuansa tradisionalnya, akibat masuknya berbagai macam budaya asing. Budaya lokal Bali yang kaya dan unik mulai tergeser oleh pengaruh budaya luar, mengubah wajah dan suasana Bali yang dikenal dengan kearifan lokalnya. Ini tidak hanya berdampak pada kehidupan sehari-hari masyarakat Bali, tetapi juga mengubah pengalaman wisatawan yang datang mencari keaslian budaya Bali. Oleh karena itu, penting bagi kita untuk menjaga dan melestarikan warisan budaya Bali agar tidak hilang ditelan arus globalisasi.
+            </p>
+          </div>
+
+          <div class="image-container">
+            <img src="/images/image-community.png" alt="gambar wisatawan yang tidak melestarikan lingkungan" />
+          </div>
         </div>
 
-        <div class="image-container">
+        <div class="sub-information">
+          <h4 class="subtitle">Perilaku yang Harus Dihindari</h4>
+          <p>
+            Berikut ini beberapa macam perilaku yang harus dihindari saat berwisata di Bali:
+          </p>
+          <ol>
+            <li><b>Membuang Sampah Sembarangan.</b>
+              <p>
+              Wisatawan sering kali membuang sampah sembarangan di pantai, gunung, dan tempat wisata lainnya. Ini termasuk botol plastik, kaleng, bungkus makanan, dan puntung rokok. Dampaknya, sampah plastik dan non-biodegradable lainnya mencemari tanah dan air. Di laut, sampah plastik dapat membahayakan kehidupan laut seperti penyu dan ikan. Sampah yang menumpuk merusak keindahan alam dan mengurangi pengalaman wisatawan lainnya yang datang untuk menikmati keindahan alam.
+              </p>
+            </li>
+            <li><b>Menggunakan Plastik Sekali Pakai.</b>
+              <p>
+              Banyak wisatawan menggunakan botol plastik, kantong plastik, dan alat makan sekali pakai yang kemudian dibuang begitu saja. Plastik yang dibuang dapat bertahan selama ratusan tahun di lingkungan, menyebabkan pencemaran tanah dan laut. Plastik yang terurai menjadi mikroplastik dapat memasuki rantai makanan dan membahayakan kesehatan manusia dan hewan. Penggunaan plastik sekali pakai juga meningkatkan volume sampah yang sulit dikelola.
+              </p>
+            </li>
+            <li><b>Mengganggu Satwa Liar.</b>
+              <p>
+              Wisatawan sering kali mendekati, memberi makan, atau bahkan memegang satwa liar seperti monyet di Ubud atau lumba-lumba di Lovina. Interaksi manusia dapat mengubah perilaku alami satwa liar, membuat mereka bergantung pada manusia untuk makanan. Selain itu, interaksi semacam ini dapat menyebabkan stres dan penyakit pada hewan. Mengganggu satwa liar juga merusak ekosistem alami yang penting untuk keseimbangan lingkungan.
+              </p>
+            </li>
+            <li><b>Merusak Terumbu Karang.</b>
+              <p>
+              Aktivitas menyelam dan snorkeling yang tidak bertanggung jawab, seperti menginjak atau menyentuh terumbu karang, mengambil bagian dari karang sebagai suvenir, dapat menyebabkan kerusakan besar. Terumbu karang sangat sensitif dan dapat rusak bahkan oleh sentuhan ringan, yang merusak ekosistem laut yang kompleks dan mempengaruhi kehidupan laut yang bergantung padanya. Kehilangan terumbu karang juga mengurangi daya tarik wisata bawah laut Bali, yang merupakan salah satu daya tarik utama pulau ini.
+              </p>
+            </li>
+            <li><b>Meninggalkan Jejak di Alam.</b>
+              <p>
+              Wisatawan yang melakukan hiking atau trekking tanpa mematuhi aturan sering kali membuat jalur baru, memetik tumbuhan liar, atau meninggalkan sampah. Tindakan ini merusak ekosistem alami dan habitat satwa liar. Selain itu, praktik-praktik semacam ini menyebabkan erosi tanah dan degradasi lingkungan. Meninggalkan jejak yang tidak perlu di alam merusak keindahan dan keutuhan ekosistem yang seharusnya dilindungi.
+              </p>
+            </li>
+          </ol>
+        </div>
         
-        </div>
       </section>
 
       <section class="comment-section">
-        <h2>Comments</h2>
+        <h2>Bagikan Pengalaman Anda!</h2>
         <div class="comment-form mb-4">
-          <input type="text" id="name-input" class="form-control mb-2" placeholder="Your Name">
-          <textarea id="comment-input" class="form-control mb-2" rows="3" placeholder="Write your comment here..."></textarea>
-          <button id="post-comment-button" class="btn btn-success">Post Comment</button>
+          <input type="text" id="name-input" class="form-control mb-2" placeholder="Nama Anda">
+          <textarea id="comment-input" class="form-control mb-2" rows="3" placeholder="Tuliskan pengalaman atau komentar Anda..."></textarea>
+          <button id="post-comment-button" class="btn btn-success">Kirim Komentar</button>
         </div>
         <div id="comments-container" class="comment-container">
           <!-- Comments will be dynamically added here -->
