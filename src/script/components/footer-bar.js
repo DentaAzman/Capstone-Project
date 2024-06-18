@@ -59,7 +59,7 @@ class FooterBar extends HTMLElement {
                   <a href="#/community" class="text-black">Community</a>
                 </li>
                 <li>
-                  <a href="#!" class="text-black">About Us</a>
+                  <a href="#/about-us" class="text-black">About Us</a>
                 </li>
               </ul>
             </div>
