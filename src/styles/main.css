@@ -296,7 +296,7 @@ main {
   object-fit: cover;
 }
 
-.sub-information ul li p {
+.sub-information ol li p {
   text-indent: 3.5em;
   text-align: justify;
 }
