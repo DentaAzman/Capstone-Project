@@ -513,7 +513,7 @@ main {
 
 .developer-photo {
   width: 100%;
-  max-width: 200px; /* Ensure it doesn't get too large */
+  max-width: 200px;
   height: auto;
   object-fit: cover;
   margin-bottom: 15px;
@@ -527,13 +527,8 @@ main {
 }
 
 .developer-links a {
-  color: #007bff;
   font-size: 24px;
   text-decoration: none;
-}
-
-.developer-links a:hover {
-  color: #0056b3;
 }
 
 /* Footer styles */
@@ -593,6 +588,5 @@ footer a {
 }
 
 footer a:hover {
-  color: black; /* Tetap hitam saat hover */
-  text-decoration: underline;
+  color: black;
 }
