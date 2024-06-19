@@ -12,13 +12,13 @@
   }
 }
 @media screen and (max-width: 1000px) {
-  .hero-container img{
+  .hero-container img {
     width: 100%;
-   }
-   #heroImage img {
-     max-height: 450px; /* Further reduced max height for smaller screens */
-   }
-   .main-information {
+  }
+  #heroImage img {
+    max-height: 450px; /* Further reduced max height for smaller screens */
+  }
+  .main-information {
     flex-direction: column-reverse; /* Stack text and image vertically with text first */
     align-items: center; /* Center align items */
   }
@@ -38,21 +38,44 @@
   }
 }
 
+@media (max-width: 768px) {
+  .explore-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .article-detail {
+    padding: 15px;
+  }
+
+  .article-detail h2 {
+    font-size: 2rem;
+  }
+
+  .article-detail p {
+    font-size: 0.9rem;
+  }
+}
+
 @media screen and (max-width: 700px) {
+  .btn {
+    width: 100px;
+  }
+
   .destination-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  .explore-card-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+
   .article-list {
-    grid-template-columns: repeat(1, 1fr); /* Adjusted min width for medium screens */
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Adjusted min width for medium screens */
     gap: 30px;
   }
-  .hero-container img{
+  .hero-container img {
     width: 100%;
   }
   .main-information {
@@ -76,7 +99,10 @@
     grid-template-columns: 1fr;
   }
   .article-list {
-    grid-template-columns: repeat(1, 1fr); /* Adjusted min width for medium screens */
+    grid-template-columns: repeat(
+      1,
+      1fr
+    ); /* Adjusted min width for medium screens */
     gap: 30px;
   }
   .tourists-problem-section,
@@ -91,9 +117,8 @@
   .comment-form {
     padding: 0 1em; /* Add some horizontal padding to the form */
   }
-  .main-information img{
+  .main-information img {
     height: 20%;
     width: 90%;
   }
 }
-
