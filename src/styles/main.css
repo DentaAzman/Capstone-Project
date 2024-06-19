@@ -329,20 +329,6 @@ main {
   border-radius: 10px;
 }
 
-@media (max-width: 768px) {
-  .article-detail {
-    padding: 15px;
-  }
-
-  .article-detail h2 {
-    font-size: 2rem;
-  }
-
-  .article-detail p {
-    font-size: 0.9rem;
-  }
-}
-
 /* Community Page */
 
 .tourists-problem-section {
@@ -608,4 +594,5 @@ footer a {
 
 footer a:hover {
   color: black; /* Tetap hitam saat hover */
+  text-decoration: underline;
 }
