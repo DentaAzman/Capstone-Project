@@ -472,6 +472,7 @@ main {
   padding: 10px 20px;
   cursor: pointer;
   margin: 1rem 0;
+  border-radius: 8px;
 }
 
 #about-us button:hover {
@@ -511,6 +512,13 @@ main {
   width: 30%;
   margin: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  transition: transform 0.3s, box-shadow 0.3s !important;
+}
+
+.developer-card:hover {
+  transform: translateY(-5%) !important;
+  box-shadow: 0 0 25px rgb(148, 238, 148);
 }
 
 .developer-card h3 {

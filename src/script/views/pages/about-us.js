@@ -30,13 +30,13 @@ const AboutUs = {
             </div>
           </div>
           <div class="developer-card" data-aos="fade-up" data-aos-delay="300">
-            <img src="path-to-photo3.jpg" alt="Developer Photo 3" class="developer-photo"/>
+            <img src="/images/foto-ridhwan.jpg" alt="Developer Photo 3" class="developer-photo"/>
             <h3>Ridhwan Tsalasah Putra</h3>
             <p>Designer & Back-End Developer</p>
             <div class="developer-links">
-              <a href="https://www.linkedin.com/in/developer3" target="_blank" class="fa fa-linkedin"></a>
-              <a href="https://www.instagram.com/developer3" target="_blank" class="fa fa-instagram"></a>
-              <a href="https://github.com/developer3" target="_blank" class="fa fa-github"></a>
+              <a href="https://www.linkedin.com/in/ridhwantsalasah/" target="_blank" class="fa fa-linkedin"></a>
+              <a href="https://www.instagram.com/ridwantsalasah?igsh=bTU0MDQ3ZGN4ejl5&utm_source=qr" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://github.com/ridwantsalasah" target="_blank" class="fa fa-github"></a>
             </div>
           </div>
         </div>
