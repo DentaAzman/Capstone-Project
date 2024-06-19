@@ -2,11 +2,48 @@ const AboutUs = {
   async render() {
     return `
       <section id="about-us">
-        <h1>About Us</h1>
-        <p>Welcome to <strong>ECO.TOUR</strong></p>
+        <h2>About Us</h2>
+        <p class="welcome-text">Welcome to <strong>ECO.TOUR</strong></p>
         <p>At ECO.TOUR, we are passionate about promoting sustainable tourism and showcasing the natural beauty of Bali. Our mission is to provide travelers with unforgettable experiences while ensuring that our environmental footprint is minimized. We believe that travel should not only be enjoyable but also responsible.</p>
+
+        <h2 class="developer-title">Meet Our Developer Team</h2>
+        <p class="developer-text">Our talented developer team powers ECO.TOUR, delivering a seamless and engaging user experience through their unique skills and expertise.</p>
+        <div class="developer-team">
+          <div class="developer-card">
+            <img src="path-to-photo1.jpg" alt="Developer Photo 1" class="developer-photo"/>
+            <h3>Ananda Rizky Daffana</h3>
+            <p>Designer & Front-End Developer</p>
+            <div class="developer-links">
+              <a href="https://www.linkedin.com/in/developer1" target="_blank" class="fa fa-linkedin"></a>
+              <a href="https://www.instagram.com/developer1" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://github.com/developer1" target="_blank" class="fa fa-github"></a>
+            </div>
+          </div>
+          <div class="developer-card">
+            <img src="/images/foto-denta.jpeg" alt="Developer Photo 2" class="developer-photo"/>
+            <h3>Denta Nurol Azman</h3>
+            <p>Designer & Front-End Developer</p>
+            <div class="developer-links">
+              <a href="https://www.linkedin.com/in/denta-nurol-azman-23a6bb2b4/" target="_blank" class="fa fa-linkedin"></a>
+              <a href="https://www.instagram.com/denta.azman?igsh=cjF1aXFkZWJleHd0" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://github.com/DentaAzman" target="_blank" class="fa fa-github"></a>
+            </div>
+          </div>
+          <div class="developer-card">
+            <img src="path-to-photo3.jpg" alt="Developer Photo 3" class="developer-photo"/>
+            <h3>Ridhwan Tsalasah Putra</h3>
+            <p>Designer & Back-End Developer</p>
+            <div class="developer-links">
+              <a href="https://www.linkedin.com/in/developer3" target="_blank" class="fa fa-linkedin"></a>
+              <a href="https://www.instagram.com/developer3" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://github.com/developer3" target="_blank" class="fa fa-github"></a>
+            </div>
+          </div>
+        </div>
+
         <h2>Our Story</h2>
         <p>ECO.TOUR was founded by a group of travel enthusiasts who share a deep love for nature and a commitment to preserving it. We noticed a growing demand for eco-friendly travel options and decided to create a platform that highlights the most stunning and Instagrammable destinations in Bali. Our goal is to inspire travelers to explore Bali's hidden gems while respecting and protecting the environment.</p>
+
         <button id="read-more-btn">Read More</button>
         <div id="more-content" style="display: none;">
             <h2>What We Offer</h2>

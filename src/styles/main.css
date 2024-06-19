@@ -40,6 +40,9 @@ div {
 
 header {
   margin-bottom: 3em;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header a {
@@ -142,6 +145,10 @@ main {
 
 .destination-list__name a:hover {
   text-decoration-line: underline;
+}
+
+.destination-image img {
+  width: 130px;
 }
 
 .explore-container {
@@ -365,6 +372,7 @@ main {
   width: 300px;
   height: 375px;
   object-fit: cover;
+  border-radius: 10px;
 }
 
 .sub-information ol li p {
@@ -439,6 +447,10 @@ main {
   color: #4caf50;
 }
 
+.welcome-text {
+  text-align: center;
+}
+
 #about-us p {
   margin: 1rem 0;
 }
@@ -463,6 +475,57 @@ main {
 
 #more-content {
   display: none;
+}
+
+#about-us {
+  padding: 20px;
+}
+
+#about-us h2 {
+  text-align: center;
+}
+
+.developer-team {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.developer-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.developer-photo {
+  width: 200px;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  border-radius: 15px;
+}
+
+.developer-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.developer-links a {
+  color: #007bff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.developer-links a:hover {
+  color: #0056b3;
 }
 
 /* Footer styles */
@@ -522,6 +585,5 @@ footer a {
 }
 
 footer a:hover {
-  text-decoration: underline;
   color: black; /* Tetap hitam saat hover */
 }
