@@ -5,6 +5,7 @@ class AppBar extends HTMLElement {
 
   render() {
     this.innerHTML = `
+    <a href="#mainContent" class="skip-link" tabindex="0">Skip To Content</a>
         <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#"><span>ECO</span>.TOUR</a>
