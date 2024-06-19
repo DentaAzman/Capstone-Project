@@ -10,8 +10,8 @@ class FooterBar extends HTMLElement {
           <section class="footer__content">
             <div class="row">
               <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-                <h2 class="text-uppercase"><b><span>ECO</span>.TOUR</b></h2>
-                <p>
+                <h2 class="text-uppercase" tabindex="0"><b><span>ECO</span>.TOUR</b></h2>
+                <p tabindex="0">
                   ECO.TOUR merupakan website tentang informasi lengkap tentang
                   wisata populer yang ada di Bali, tidak hanya itu, himbauan
                   kepada wisatawan akan menjaga kelestarian lingkungan juga harus
@@ -22,7 +22,7 @@ class FooterBar extends HTMLElement {
                 </p>
               </div>
               <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
+                <h5 class="text-uppercase" tabindex="0">Links</h5>
                 <ul class="list-unstyled mb-0">
                   <li><a href="#/explore-canggu" class="text-black">Canggu</a></li>
                   <li><a href="#/explore-nusadua" class="text-black">Nusa Dua</a></li>
@@ -33,7 +33,7 @@ class FooterBar extends HTMLElement {
                 </ul>
               </div>
               <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Links</h5>
+                <h5 class="text-uppercase" tabindex="0">Links</h5>
                 <ul class="list-unstyled mb-0">
                   <li><a href="#/explore" class="text-black">Explore</a></li>
                   <li><a href="#/community" class="text-black">Community</a></li>
@@ -53,7 +53,7 @@ class FooterBar extends HTMLElement {
           </section>
         </div>
         <div class="text-center p-3" style="background-color: rgba(5, 107, 3, 0.2)">
-          &copy; 2024 Copyright: ECO.TOUR
+          <p tabindex="0">&copy; 2024 Copyright: ECO.TOUR</p>
         </div>
       </footer>
     `;

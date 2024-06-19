@@ -38,6 +38,21 @@ div {
   color: rgb(32, 32, 32) !important;
 }
 
+.skip-link {
+  position: absolute;
+  top: -150px;
+  left: 0;
+  padding: 16px;
+  background-color: rgb(126, 220, 100);
+  color: white;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 0;
+  text-decoration: none;
+}
+
 header {
   margin-bottom: 3em;
   position: sticky;

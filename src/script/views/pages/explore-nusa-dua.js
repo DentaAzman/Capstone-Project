@@ -7,9 +7,9 @@ const ExploreNusaDua = {
     return `
       <div class="hero hero-nusadua" data-aos="fade-up">
         <div class="hero__inner" data-aos="fade-down" data-aos-delay="300">
-          <h2 class="hero__title">NUSA DUA</h2>
+          <h2 class="hero__title" tabindex="0">NUSA DUA</h2>
           <br />
-          <p class="hero__tagline">
+          <p class="hero__tagline" tabindex="0">
             Hotel Kelas Dunia dengan Destinasi wisata exsotis dan pantai yang
             tiada tara
           </p>

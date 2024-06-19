@@ -10,8 +10,8 @@ const explore = {
     return `
       <div class="explore-container" data-aos="fade-in">
         <div class="heading" data-aos="fade-down">
-          <h2 class="heading__title">Explore Bali</h2>
-          <p class="heading__text">
+          <h2 class="heading__title" tabindex="0">Explore Bali</h2>
+          <p class="heading__text" tabindex="0">
             Temukan Tempat Wisata Bali yang Sedang Populer!
           </p>
         </div>

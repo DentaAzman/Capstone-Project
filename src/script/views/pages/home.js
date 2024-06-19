@@ -10,8 +10,8 @@ const Home = {
   async render() {
     return `
       <div class="hero-container">
-        <h1 data-aos="fade-up">6 Destinasi Instagrammable di Bali yang Harus Anda Kunjungi</h1>
-        <p data-aos="fade-up" data-aos-delay="100">Mulai Liburanmu Dari Sini!</p>
+        <h1 data-aos="fade-up" tabindex="0">6 Destinasi Instagrammable di Bali yang Harus Anda Kunjungi</h1>
+        <p data-aos="fade-up" data-aos-delay="100" tabindex="0">Mulai Liburanmu Dari Sini!</p>
         <div class="d-grid gap-2 col-3 mx-auto" data-aos="fade-up" data-aos-delay="200">
           <a href="#/explore">
             <button class="btn btn-primary" type="button">Explore!</button>
@@ -23,12 +23,12 @@ const Home = {
 
       <div class="destination-list">
         <div class="destination-list__container" data-aos="fade-up">
-          <div class="destination-image" data-src="Ellipse 2.png"></div>
+          <div class="destination-image" data-src="Ellipse 2.png" tabindex="0"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
               <a href="#/explore-canggu">Canggu & Berawa</a>
             </h2>
-            <p class="destination-list__body">
+            <p class="destination-list__body" tabindex="0">
               The best mix of Everything Bali has to offer - surfing, party,
               yoga, restaurants & cafes
             </p>
@@ -36,12 +36,12 @@ const Home = {
         </div>
 
         <div class="destination-list__container" data-aos="fade-up">
-          <div class="destination-image" data-src="Ellipse 4.png"></div>
+          <div class="destination-image" data-src="Ellipse 4.png" tabindex="0"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
               <a href="#/explore-nusadua">Nusa Dua & Benoa</a>
             </h2>
-            <p class="destination-list__body">
+            <p class="destination-list__body" tabindex="0">
               International 5star Resorts and golf courses for the luxury
               traveler
             </p>
@@ -49,12 +49,12 @@ const Home = {
         </div>
 
         <div class="destination-list__container" data-aos="fade-up">
-          <div class="destination-image" data-src="Ellipse 1.png"></div>
+          <div class="destination-image" data-src="Ellipse 1.png" tabindex="0"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
               <a href="#/explore-seminyak">Seminyak & Petitenget</a>
             </h2>
-            <p class="destination-list__body">
+            <p class="destination-list__body" tabindex="0">
               Luxury villas, great hotels, beach & surf, nightlife, amazing
               shopping & food
             </p>
@@ -62,24 +62,24 @@ const Home = {
         </div>
 
         <div class="destination-list__container" data-aos="fade-up">
-          <div class="destination-image" data-src="Ellipse 5.png"></div>
+          <div class="destination-image" data-src="Ellipse 5.png" tabindex="0"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
               <a href="#/explore-kintamani">Kintamani</a>
             </h2>
-            <p class="destination-list__body">
+            <p class="destination-list__body" tabindex="0">
               Fancy Cafe With the best view of mount Batur
             </p>
           </div>
         </div>
 
         <div class="destination-list__container" data-aos="fade-up">
-          <div class="destination-image" data-src="Ellipse 3.png"></div>
+          <div class="destination-image" data-src="Ellipse 3.png" tabindex="0"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
               <a href="#/explore-ubud">Ubud</a>
             </h2>
-            <p class="destination-list__body">
+            <p class="destination-list__body" tabindex="0">
               Bali’s cultural center. Blend of art, spirituality, lifestyle, &
               culinary delights.
             </p>
@@ -87,12 +87,12 @@ const Home = {
         </div>
 
         <div class="destination-list__container" data-aos="fade-up"> 
-          <div class="destination-image" data-src="Ellipse 6.png"></div>
+          <div class="destination-image" data-src="Ellipse 6.png" tabindex="0"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
               <a href="#/explore-kuta">Kuta & Tuban</a>
             </h2>
-            <p class="destination-list__body">
+            <p class="destination-list__body" tabindex="0">
               Bali’s party place for the young and wild. Bars, Shopping, Beach
               Life & Party
             </p>

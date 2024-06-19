@@ -7,9 +7,9 @@ const ExploreKuta = {
     return `
       <div class="hero hero-kuta" data-aos="fade-up">
         <div class="hero__inner" data-aos="fade-down" data-aos-delay="300">
-          <h2 class="hero__title">KUTA</h2>
+          <h2 class="hero__title" tabindex="0">KUTA</h2>
           <br />
-          <p class="hero__tagline">
+          <p class="hero__tagline" tabindex="0">
             Salah satu tujuan utama Tourist, dikenal dengan susana nightclub dan surfing di laut lepas Samudra Hindia.
           </p>
         </div>

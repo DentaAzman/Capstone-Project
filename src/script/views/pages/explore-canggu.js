@@ -7,9 +7,9 @@ const ExploreCanggu = {
     return `
       <div class="hero hero-canggu" data-aos="fade-up">
         <div class="hero__inner" data-aos="fade-down" data-aos-delay="300">
-          <h2 class="hero__title">CANGGU</h2>
+          <h2 class="hero__title" tabindex="0">CANGGU</h2>
           <br />
-          <p class="hero__tagline">
+          <p class="hero__tagline" tabindex="0">
             Cakrawala yang indah dengan pemandangan laut serta matahari terbenam
           </p>
         </div>

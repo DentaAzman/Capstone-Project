@@ -7,9 +7,9 @@ const ExploreKintamani = {
     return `
       <div class="hero hero-kintamani" data-aos="fade-up">
         <div class="hero__inner" data-aos="fade-down" data-aos-delay="300">
-          <h2 class="hero__title">KINTAMANI</h2>
+          <h2 class="hero__title" tabindex="0">KINTAMANI</h2>
           <br />
-          <p class="hero__tagline">
+          <p class="hero__tagline" tabindex="0">
             Menikmati suasana Gunung Batur dan Danau Batur dengan Kopi Kintamani
             di Coffee Shop terbaik.
           </p>
