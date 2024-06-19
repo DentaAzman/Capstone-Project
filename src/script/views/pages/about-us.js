@@ -42,7 +42,7 @@ const AboutUs = {
         </div>
 
         <h2 class="developer-title" data-aos="fade-up">Team Advisor</h2>
-        <p class="developer-text text-align" data-aos="fade-up">Our Front-End advisors provide invaluable guidance to our project team. Their expertise helps us enhance our technical skills and strategic approach, ensuring the success and excellence of our development efforts.</p>
+        <p class="developer-text text-align" data-aos="fade-up">Our Front-End advisor provide invaluable guidance to our project team. His expertise helps us enhance our technical skills and strategic approach, ensuring the success and excellence of our development efforts.</p>
         <div class="developer-team">
           <div class="developer-card" data-aos="fade-up">
             <img src="/images/foto-advisor.jpg" alt="Advisor Photo" class="developer-photo"/>
