@@ -526,8 +526,9 @@ main {
 }
 
 .developer-photo {
-  width: 200px;
-  height: 220px;
+  width: 100%;
+  max-width: 200px; /* Ensure it doesn't get too large */
+  height: auto;
   object-fit: cover;
   margin-bottom: 15px;
   border-radius: 15px;
