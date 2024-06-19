@@ -7,6 +7,7 @@ import './bootstrap.bundle.min.js';
 
 import App from './views/app.js';
 import routes from './routes/routes.js';
+import swRegister from './utils/sw-register.js';
 
 const app = new App({
   button: document.querySelector('#hamburgerButton'),
@@ -21,6 +22,7 @@ window.addEventListener('hashchange', () => {
 
 window.addEventListener('load', () => {
   app.renderPage();
+  swRegister();
 });
 
 function main() {}
