@@ -22,7 +22,7 @@ const Home = {
       </div>
 
       <div class="destination-list">
-        <div class="destination-list__container" data-aos="fade-up" data-aos-delay="500">
+        <div class="destination-list__container" data-aos="fade-up">
           <div class="destination-image" data-src="Ellipse 2.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">
@@ -35,7 +35,7 @@ const Home = {
           </div>
         </div>
 
-        <div class="destination-list__container" data-aos="fade-up" data-aos-delay="600">
+        <div class="destination-list__container" data-aos="fade-up">
           <div class="destination-image" data-src="Ellipse 4.png"></div>
           <div class="destination-list__info">
             <h2 class="destination-list__name">

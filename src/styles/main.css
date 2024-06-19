@@ -444,7 +444,7 @@ main {
 
 .about-us-container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 5em auto;
 }
 
 #about-us h1,
@@ -478,6 +478,10 @@ main {
   background-color: #45a049;
 }
 
+#about-us .text-align {
+  text-align: justify !important;
+}
+
 #more-content {
   display: none;
 }
@@ -507,6 +511,10 @@ main {
   width: 30%;
   margin: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.developer-card h3 {
+  font-size: 1.5em;
 }
 
 .developer-photo {
