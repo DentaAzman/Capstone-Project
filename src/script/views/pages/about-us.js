@@ -1,7 +1,7 @@
 const AboutUs = {
   async render() {
     return `
-      <section id="about-us">
+      <section id="about-us" class="about-us-container">
         <h2>About Us</h2>
         <p class="welcome-text">Welcome to <strong>ECO.TOUR</strong></p>
         <p>At ECO.TOUR, we are passionate about promoting sustainable tourism and showcasing the natural beauty of Bali. Our mission is to provide travelers with unforgettable experiences while ensuring that our environmental footprint is minimized. We believe that travel should not only be enjoyable but also responsible.</p>
@@ -37,6 +37,21 @@ const AboutUs = {
               <a href="https://www.linkedin.com/in/developer3" target="_blank" class="fa fa-linkedin"></a>
               <a href="https://www.instagram.com/developer3" target="_blank" class="fa fa-instagram"></a>
               <a href="https://github.com/developer3" target="_blank" class="fa fa-github"></a>
+            </div>
+          </div>
+        </div>
+
+        <h2 class="developer-title">Team Advisor</h2>
+        <p class="developer-text">Our Front-End advisors provide invaluable guidance to our project team. Their expertise helps us enhance our technical skills and strategic approach, ensuring the success and excellence of our development efforts.</p>
+        <div class="developer-team">
+          <div class="developer-card">
+            <img src="/images/foto-advisor.jpg" alt="Advisor Photo" class="developer-photo"/>
+            <h3>Muhammad Fauzan Amzar</h3>
+            <p>Front-End Advisor</p>
+            <div class="developer-links">
+              <a href="https://www.linkedin.com/in/mfauzanamzar/" target="_blank" class="fa fa-linkedin"></a>
+              <a href="https://www.instagram.com/mfauzanamzar/" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://github.com/mfauzanamzar" target="_blank" class="fa fa-github"></a>
             </div>
           </div>
         </div>
