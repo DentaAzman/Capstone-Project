@@ -10,13 +10,13 @@ const AboutUs = {
         <p class="developer-text">Our talented developer team powers ECO.TOUR, delivering a seamless and engaging user experience through their unique skills and expertise.</p>
         <div class="developer-team">
           <div class="developer-card">
-            <img src="path-to-photo1.jpg" alt="Developer Photo 1" class="developer-photo"/>
+            <img src="/images/foto-daffa.jpg" alt="Developer Photo 1" class="developer-photo"/>
             <h3>Ananda Rizky Daffana</h3>
             <p>Designer & Front-End Developer</p>
             <div class="developer-links">
               <a href="https://www.linkedin.com/in/developer1" target="_blank" class="fa fa-linkedin"></a>
-              <a href="https://www.instagram.com/developer1" target="_blank" class="fa fa-instagram"></a>
-              <a href="https://github.com/developer1" target="_blank" class="fa fa-github"></a>
+              <a href="https://www.instagram.com/rizkydaffa_?igsh=MXhkOHpxdnptOWx4Zw%3D%3D&utm_source=qr" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://github.com/rizkydaffa" target="_blank" class="fa fa-github"></a>
             </div>
           </div>
           <div class="developer-card">
